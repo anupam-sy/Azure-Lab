@@ -1,26 +1,25 @@
-# PowerShell-Lab
-This repository contains PowerShell scripts related to different usecases.
+# Azure-Lab
+This repository contains PowerShell scripts related to different usecases of Azure.
 
-Prerequisite:
--------------
-1) Powershell version must be 5.1 or greater. To check the powersehll version,
-use the following command:
+## Prerequisite:
+Powershell version must be 5.1 or greater. To check the powersehll version, use the following command.
 
 	$PSVersionTable.PSVersion
 
-2) Execution policy of the user (thru which you want to execute the script) must
-be set to unrestricted for the uninterrupted execution. To check the execution 
-policy, run the following command in powershell terminal:
+Az module must be installed on your system. Az runs on Windows PowerShell 5.1 and PowerShell Core (cross-platform). To check which versions of the module you have installed, use below commands.
 
-	get-executionpolicy -list
+	Get-InstalledModule -Name "Az*" (or) Get-Module -Name *Az.* -ListAvailable
 
-To define/set the execution policy to unrestricted, Run the following command in
-powershell window:
+To install Az module with global scope, you must have administrator rights else install for user scope only.
 
-	set-executionpolicy unrestricted
+	For Global Scope: Install-Module -Name Az -AllowClobber
+	For User Scope: Install-Module -Name Az -AllowClobber -Scope CurrentUser
 
-Execution:
-----------
+## Execution:
 To run the script, go to command prompt and then run the following command:
 
 	powershell -file <script_name_with_complete_path>
+
+## References:
+
+> https://petri.com/azure-az-module-for-windows-powershell-core-and-cloud-shell-replaces-azurerm
