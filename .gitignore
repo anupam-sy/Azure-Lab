@@ -1,0 +1,4 @@
+# Exclude files
+
+PS-General_Usecases/DataCleaner.ps1
+PS-General_Usecases/DirSizeCalculator.ps1
